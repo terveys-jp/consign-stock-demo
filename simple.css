@@ -1,0 +1,90 @@
+/* 簡単版（index.html）。色と書体は style.css の :root を使う。2026-10-13 */
+body.simple { background: var(--bg); }
+.s-wrap { max-width: 860px; margin: 0 auto; padding: 28px 16px 40px; }
+
+.s-hero {
+  background: linear-gradient(160deg, #14365d 0%, #1f4a7a 55%, #0f7c76 100%);
+  color: #fff;
+  border-radius: 14px;
+  padding: 26px 24px 22px;
+  margin-bottom: 16px;
+}
+.s-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, .16);
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 999px;
+  padding: 2px 12px;
+  margin-bottom: 10px;
+}
+.s-hero h1 { font-size: 26px; line-height: 1.45; margin: 0 0 10px; }
+.s-lead { margin: 0; font-size: 15px; opacity: .92; }
+
+.s-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.s-card h2 { font-size: 18px; color: var(--navy); margin: 0 0 10px; line-height: 1.5; }
+.s-card h2 small { font-size: 13px; font-weight: 400; color: var(--muted); }
+.s-card p { margin: 0 0 6px; }
+.s-card p:last-child { margin-bottom: 0; }
+
+.s-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.s-steps li { display: flex; gap: 12px; align-items: flex-start; background: var(--teal-soft); border-radius: 8px; padding: 12px 14px; }
+.s-no {
+  flex: 0 0 auto;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--teal); color: #fff;
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 16px;
+}
+.s-steps b { color: var(--navy); font-size: 16px; }
+.s-steps p { margin: 2px 0 0; font-size: 14px; }
+
+.s-results { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px; }
+.s-res { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.s-res-h { font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+.s-res-v { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
+.s-res-v em { display: block; font-style: normal; font-size: 12px; color: var(--muted); line-height: 1.3; }
+.s-now span, .s-opt span { font-size: 30px; font-weight: 700; line-height: 1.2; font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; }
+.s-now span { color: var(--now); }
+.s-opt span { color: var(--teal); }
+.s-arr { font-size: 22px; color: var(--muted); padding-bottom: 4px; }
+.s-note { font-size: 13px; color: var(--muted); }
+
+.s-orders { list-style: none; margin: 0; padding: 0; }
+.s-orders li { border-left: 4px solid var(--teal); background: #f8fafc; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-bottom: 8px; }
+.s-orders li:last-child { margin-bottom: 0; }
+.s-tag { display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: var(--navy); border-radius: 4px; padding: 0 8px; margin-right: 8px; }
+.s-when { display: inline-block; font-size: 12px; color: var(--muted); margin-right: 8px; }
+
+.s-more { text-align: center; margin: 22px 0 10px; }
+.s-btn {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 12px 22px;
+}
+.s-btn:hover { background: var(--navy-2); }
+.s-more p { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+
+.s-nw { white-space: nowrap; }
+.s-foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 18px; line-height: 1.8; }
+
+@media (max-width: 640px) {
+  .s-wrap { padding: 16px 16px 32px; }
+  .s-hero { padding: 20px 18px 18px; }
+  .s-hero h1 { font-size: 21px; }
+  .s-card h2 small { display: block; }
+  .s-card { padding: 16px; }
+  .s-steps, .s-results { grid-template-columns: 1fr; }
+  .s-now span, .s-opt span { font-size: 26px; }
+}
